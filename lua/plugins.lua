@@ -59,6 +59,8 @@ return require('packer').startup({
 
         use {'mfussenegger/nvim-lint'}
 
+        use {'sbdchd/neoformat'}
+
     end,
     config = {
         max_jobs = 16
