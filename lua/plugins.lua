@@ -57,6 +57,8 @@ return require('packer').startup({
         use { "hrsh7th/cmp-buffer"}
         use { "hrsh7th/vim-vsnip"}
 
+        use {'mfussenegger/nvim-lint'}
+
     end,
     config = {
         max_jobs = 16
