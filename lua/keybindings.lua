@@ -14,6 +14,7 @@ local pluginKeys = {}
 
 -- nvimTree
 map('n', '<C-b>', ':NvimTreeFindFileToggle<CR>', opt)
-map('n', '<C-f>', ':Neoformat<CR>', opt)
+
+map("n", "<leader>cf", "<cmd>Neoformat<CR>", opt)
 
 return pluginKeys
