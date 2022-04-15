@@ -41,9 +41,6 @@ return require('packer').startup({
 
         use {"akinsho/toggleterm.nvim"}
 
-
-        use {"folke/which-key.nvim"}
-
         use { "ethanholz/nvim-lastplace"}
 
         use { "lukas-reineke/indent-blankline.nvim"}
@@ -61,6 +58,8 @@ return require('packer').startup({
 
         use {'sbdchd/neoformat'}
         use {'folke/which-key.nvim'}
+
+        use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
     end,
     config = {
