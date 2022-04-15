@@ -60,6 +60,7 @@ return require('packer').startup({
         use {'mfussenegger/nvim-lint'}
 
         use {'sbdchd/neoformat'}
+        use {'folke/which-key.nvim'}
 
     end,
     config = {

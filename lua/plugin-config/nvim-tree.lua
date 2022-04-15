@@ -1,8 +1,19 @@
 -- setup with all defaults
+
+-- 0 by default, will change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
+vim.g.nvim_tree_respect_buf_cwd = 1
+
+vim.g.nvim_tree_show_icons = {
+    git = 1,
+    folders = 0,
+    files = 0,
+    folder_arrows = 0,
+}
+
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
 require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
 auto_reload_on_write = true,
-disable_netrw = false,
+disable_netrw = true,
 hide_root_folder = false,
 hijack_cursor = false,
 hijack_netrw = true,
@@ -11,12 +22,15 @@ ignore_buffer_on_setup = false,
 open_on_setup = false,
 open_on_tab = false,
 sort_by = "name",
-update_cwd = false,
+update_cwd = true,
 view = {
-    width = 30,
+    width = function()
+        local columns = vim.go.columns
+        return math.floor(columns * 0.2) > 25 and math.floor(columns * 0.2) or 25
+    end,
     height = 30,
     side = "left",
-    preserve_window_proportions = true,
+    preserve_window_proportions = false,
     number = false,
     relativenumber = false,
     signcolumn = "yes",
@@ -32,8 +46,8 @@ hijack_directories = {
     auto_open = true,
 },
 update_focused_file = {
-    enable = false,
-    update_cwd = false,
+    enable = true,
+    update_cwd = true,
     ignore_list = {},
 },
 ignore_ft_on_setup = {},
@@ -58,7 +72,7 @@ filters = {
 },
 git = {
     enable = true,
-    ignore = true,
+    ignore = false,
     timeout = 400,
 },
 actions = {
@@ -95,3 +109,6 @@ log = {
     },
 },
 } -- END_DEFAULT_OPTS
+
+-- nvimTree keymap
+vim.api.nvim_set_keymap('n', '<C-b>', ':NvimTreeFindFileToggle<CR>', { noremap = true, silent = true })
