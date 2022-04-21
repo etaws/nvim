@@ -5,7 +5,7 @@ end
 
 bufferline.setup {
     options = {
-        numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
+        numbers = "both", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
         close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
         right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
         left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
@@ -165,3 +165,13 @@ bufferline.setup {
         },
     },
 }
+
+vim.api.nvim_set_keymap( "n", "<leader>1", "<cmd>BufferLineGoToBuffer 1<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap( "n", "<leader>2", "<cmd>BufferLineGoToBuffer 2<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap( "n", "<leader>3", "<cmd>BufferLineGoToBuffer 3<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap( "n", "<leader>4", "<cmd>BufferLineGoToBuffer 4<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap( "n", "<leader>5", "<cmd>BufferLineGoToBuffer 5<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap( "n", "<leader>6", "<cmd>BufferLineGoToBuffer 6<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap( "n", "<leader>7", "<cmd>BufferLineGoToBuffer 7<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap( "n", "<leader>8", "<cmd>BufferLineGoToBuffer 8<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap( "n", "<leader>9", "<cmd>BufferLineGoToBuffer 9<CR>", { noremap = true, silent = true })

@@ -14,6 +14,7 @@ local pluginKeys = {}
 
 map("n", "<leader>cf", "<cmd>Neoformat<CR>", opt)
 
-map('n', '<leader>b', ':ls<CR>:b<Space>', opt)
+map('n', '<C-l>', ':ls<CR>:b<Space>', opt)
+map('n', '<C-k>', ':bd<CR>', opt)
 
 return pluginKeys

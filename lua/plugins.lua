@@ -4,8 +4,12 @@ return require('packer').startup({
         use 'wbthomason/packer.nvim'
 
         use 'glepnir/zephyr-nvim'
+        use 'ellisonleao/gruvbox.nvim'
         use 'folke/tokyonight.nvim'
         use 'sainnhe/edge'
+        use 'Mofiqul/vscode.nvim'
+        use 'tjdevries/colorbuddy.vim'
+        use 'Th3Whit3Wolf/onebuddy'
 
         use {
             'kyazdani42/nvim-web-devicons',
@@ -61,6 +65,14 @@ return require('packer').startup({
 
         use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
+        use {
+            'nvim-telescope/telescope.nvim',
+            requires = { {'nvim-lua/plenary.nvim'} }
+        }
+
+        use {"ellisonleao/glow.nvim", branch = 'main'}
+
+        use {'simrat39/symbols-outline.nvim'}
     end,
     config = {
         max_jobs = 16

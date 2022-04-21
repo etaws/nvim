@@ -1,7 +1,7 @@
 -- setup with all defaults
 
 -- 0 by default, will change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
-vim.g.nvim_tree_respect_buf_cwd = 1
+vim.g.nvim_tree_respect_buf_cwd = 0
 
 vim.g.nvim_tree_show_icons = {
     git = 1,
@@ -13,7 +13,7 @@ vim.g.nvim_tree_show_icons = {
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
 require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
 auto_reload_on_write = true,
-disable_netrw = true,
+disable_netrw = false,
 hide_root_folder = false,
 hijack_cursor = false,
 hijack_netrw = true,
@@ -22,12 +22,9 @@ ignore_buffer_on_setup = false,
 open_on_setup = false,
 open_on_tab = false,
 sort_by = "name",
-update_cwd = true,
+update_cwd = false,
 view = {
-    width = function()
-        local columns = vim.go.columns
-        return math.floor(columns * 0.2) > 25 and math.floor(columns * 0.2) or 25
-    end,
+    width = 30,
     height = 30,
     side = "left",
     preserve_window_proportions = false,
