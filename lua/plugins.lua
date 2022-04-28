@@ -17,19 +17,16 @@ return require('packer').startup({
 
         use {
             'kyazdani42/nvim-tree.lua',
-            requires = {
-                'kyazdani42/nvim-web-devicons', -- optional, for file icon
-            },
-            config = function() require'nvim-tree'.setup {} end
+            requires = { 'kyazdani42/nvim-web-devicons' }
         }
 
         use {
             "nvim-lualine/lualine.nvim",
-            requires = {"kyazdani42/nvim-web-devicons"}
+            requires = { "kyazdani42/nvim-web-devicons" }
         }
 
         -- bufferline
-        use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
+        use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
 
         -- treesitter
         use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -43,36 +40,39 @@ return require('packer').startup({
             requires = "nvim-treesitter/nvim-treesitter"
         }
 
-        use {"akinsho/toggleterm.nvim"}
+        use { "akinsho/toggleterm.nvim" }
 
-        use { "ethanholz/nvim-lastplace"}
+        use { "ethanholz/nvim-lastplace" }
 
-        use { "lukas-reineke/indent-blankline.nvim"}
+        use { "lukas-reineke/indent-blankline.nvim" }
 
-        use { "neovim/nvim-lspconfig"}
+        use { "neovim/nvim-lspconfig" }
+        use { "tami5/lspsaga.nvim" }
 
-        use { "hrsh7th/nvim-cmp"}
-        use { "hrsh7th/cmp-nvim-lsp"}
-        use { "hrsh7th/cmp-vsnip"}
-        use { "hrsh7th/cmp-path"}
-        use { "hrsh7th/cmp-buffer"}
-        use { "hrsh7th/vim-vsnip"}
+        use { "hrsh7th/nvim-cmp" }
+        use { "hrsh7th/cmp-nvim-lsp" }
+        use { "hrsh7th/cmp-vsnip" }
+        use { "hrsh7th/cmp-path" }
+        use { "hrsh7th/cmp-buffer" }
+        use { "hrsh7th/vim-vsnip" }
 
-        use {'mfussenegger/nvim-lint'}
+        use { 'mfussenegger/nvim-lint' }
 
-        use {'sbdchd/neoformat'}
-        use {'folke/which-key.nvim'}
+        -- use {'sbdchd/neoformat'}
+        use { 'folke/which-key.nvim' }
 
         use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
         use {
             'nvim-telescope/telescope.nvim',
-            requires = { {'nvim-lua/plenary.nvim'} }
+            requires = { { 'nvim-lua/plenary.nvim' } }
         }
 
-        use {"ellisonleao/glow.nvim", branch = 'main'}
+        use { "ellisonleao/glow.nvim", branch = 'main' }
 
-        use {'simrat39/symbols-outline.nvim'}
+        use { 'simrat39/symbols-outline.nvim' }
+
+        use { 'luukvbaal/nnn.nvim' }
     end,
     config = {
         max_jobs = 16
