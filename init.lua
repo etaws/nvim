@@ -2,9 +2,9 @@ require('basic')
 
 require('keybindings')
 
-require("plugins")
+require('plugins')
 
-require("colorscheme")
+require('colorscheme')
 
 require('plugin-config/nvim-bufferline')
 require('plugin-config/nvim-tree')
@@ -24,3 +24,4 @@ require('plugin-config/diffview')
 require('plugin-config/telescope')
 require('plugin-config/symbols-outline')
 require('plugin-config/nnn')
+require('plugin-config/fidget')

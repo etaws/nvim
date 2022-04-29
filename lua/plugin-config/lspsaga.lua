@@ -16,7 +16,7 @@ lspsaga.setup({
     -- code action title icon
     code_action_icon = " ",
     code_action_prompt = {
-        enable = true,
+        enable = false,
         sign = true,
         sign_priority = 40,
         virtual_text = true,
@@ -41,7 +41,7 @@ lspsaga.setup({
         exec = "<CR>",
     },
     definition_preview_icon = "  ",
-    border_style = "single",
+    border_style = "round",
     rename_prompt_prefix = "➤",
     rename_output_qflist = {
         enable = false,
@@ -69,14 +69,14 @@ vim.api.nvim_set_keymap(
 
 vim.api.nvim_set_keymap(
     "n",
-    "<C-d>",
+    "<C-n>",
     "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>",
     { noremap = true, silent = true }
 )
 
 vim.api.nvim_set_keymap(
     "n",
-    "<C-u>",
+    "<C-p>",
     "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>",
     { noremap = true, silent = true }
 )
