@@ -14,7 +14,6 @@ return require('packer').startup(function(use)
 
     use {
         'kyazdani42/nvim-tree.lua',
-        opt = true,
         requires = { 'kyazdani42/nvim-web-devicons' }
     }
 
@@ -72,4 +71,5 @@ return require('packer').startup(function(use)
 
     use { 'luukvbaal/nnn.nvim' }
     use { 'j-hui/fidget.nvim' }
+    use { 'windwp/nvim-spectre' }
 end)
