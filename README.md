@@ -7,6 +7,7 @@ Neovim 配置文件（for Mac OS）
 * [glow](https://github.com/charmbracelet/glow)
 * [nnn](https://github.com/jarun/nnn)
 * [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli)
+* [stylua](https://github.com/JohnnyMorganz/StyLua)
 * ripgrep
 * gnu-sed
 * exiftool
@@ -20,6 +21,7 @@ npm install -g markdownlint-cli
 brew install ripgrep
 brew install gnu-sed
 brew install exiftool
+cargo install stylua
 ```
 
 ## 需要安装的 LSP Server
