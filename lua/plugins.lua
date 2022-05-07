@@ -55,7 +55,7 @@ return require('packer').startup(function(use)
 
     use { 'mfussenegger/nvim-lint' }
 
-    -- use {'sbdchd/neoformat'}
+    use { 'sbdchd/neoformat' }
     use { 'folke/which-key.nvim' }
 
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
