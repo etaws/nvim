@@ -47,7 +47,7 @@ vim.o.swapfile = false
 
 -- smaller updatetime
 vim.o.updatetime = 250
-vim.wo.signcolumn = 'yes'
+vim.wo.signcolumn = "yes"
 -- 设置 timeoutlen 为等待键盘快捷键连击时间500毫秒，可根据需要设置
 -- 遇到问题详见：https://github.com/nshen/learn-neovim-lua/issues/1
 vim.o.timeoutlen = 500
@@ -56,14 +56,14 @@ vim.o.timeoutlen = 500
 vim.g.completeopt = "menu,menuone,noinsert"
 
 -- 样式
-vim.o.background = "light"
+vim.o.background = "dark"
 vim.o.termguicolors = true
 vim.g.edge_disable_terminal_colors = 1
 vim.g.edge_better_performance = 1
 
 -- 不可见字符的显示，这里只把空格显示为一个点
 vim.o.list = true
-vim.o.listchars = "space:·"
+vim.o.listchars = "eol:^,space:.,tab:<->,trail:~,extends:>,precedes:<"
 
 -- 命令行高为2，提供足够的显示空间
 vim.o.cmdheight = 2
