@@ -1,6 +1,6 @@
 local ok, lspsaga = pcall(require, "lspsaga")
 if not ok then
-    vim.notify "Could not load lspsaga"
+    vim.notify("Could not load lspsaga")
     return
 end
 
