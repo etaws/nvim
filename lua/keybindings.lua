@@ -7,15 +7,15 @@ local map = vim.api.nvim_set_keymap
 
 local opt = {
     noremap = true,
-    silent = true
+    silent = true,
 }
 
 local pluginKeys = {}
 
-map("n", "<leader>cf", "<cmd>Neoformat<CR>", opt)
+map("n", "<leader>gf", "<cmd>Neoformat<CR>", opt)
 map("n", "<C-h>", "<cmd>SymbolsOutline<CR>", opt)
 
-map('n', '<C-l>', ':ls<CR>:b<Space>', opt)
-map('n', '<C-k>', ':bd<CR>', opt)
+map("n", "<C-l>", ":ls<CR>:b<Space>", opt)
+map("n", "<C-k>", ":bd<CR>", opt)
 
 return pluginKeys

@@ -84,6 +84,6 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap(
     "n",
     "gv",
-    "<cmd>lua require'lspsaga.provider'.preview_definition()<CR>",
+    "<cmd>lua require('lspsaga.provider').preview_definition()<CR>",
     { noremap = true, silent = true }
 )

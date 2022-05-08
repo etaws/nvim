@@ -9,7 +9,7 @@ local on_attach = function(_, bufnr)
     map(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
     -- map(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
     map(bufnr, "n", "gr", "<cmd>Telescope lsp_references theme=dropdown<CR>", opts)
-    map(bufnr, "n", "gf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+    -- map(bufnr, "n", "gf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 
     -- goto preview keymappigs
     -- map(bufnr, "n", "gp", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts)
