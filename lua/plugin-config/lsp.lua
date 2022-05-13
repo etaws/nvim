@@ -22,23 +22,49 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
+-- clangd setup
+nvim_lsp["clangd"].setup({
+    capabilities = capabilities,
+    cmd = {
+        "clangd",
+        "--background-index",
+        "--suggest-missing-includes",
+        "--clang-tidy",
+        "--completion-style=bundled",
+        "--header-insertion=iwyu",
+    },
+    on_attach = on_attach,
+    flags = { debounce_text_changes = 150 },
+})
+
+-- sumneko_lua location
 local runtime_path = vim.split(package.path, ";")
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
+nvim_lsp["sumneko_lua"].setup({
+    capabilities = capabilities,
+    settings = {
+        Lua = {
+            runtime = { version = "LuaJIT", path = runtime_path },
+            diagnostics = { globals = { "vim", "use", "packer_plugins" } },
+            telemetry = { enable = false },
+            workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+        },
+    },
+    on_attach = on_attach,
+    flags = { debounce_text_changes = 150 },
+})
 
-local servers = { "rust_analyzer", "sumneko_lua" }
-for _, lsp in pairs(servers) do
-    require("lspconfig")[lsp].setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
-        settings = {
-            Lua = {
-                diagnostics = { globals = { "vim" } },
-            },
-        },
-        flags = {
-            -- This will be the default in neovim 0.7+
-            debounce_text_changes = 150,
-        },
-    })
-end
+-- cmake setup
+nvim_lsp["cmake"].setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+    flags = { debounce_text_changes = 150 },
+})
+
+-- rust_analyzer setup
+nvim_lsp["rust_analyzer"].setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+    flags = { debounce_text_changes = 150 },
+})

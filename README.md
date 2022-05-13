@@ -28,6 +28,17 @@ cargo install stylua
 
 * [rust-analyzer](https://rust-analyzer.github.io)
 * [lua-language-server](https://github.com/sumneko/lua-language-server)
+* cmake-language-server
+* clangd（如果要格式化的话，还需要确保安装了 clang-format
+
+> clangd 正常工作，还需要在项目根目录生成一个 compile_commands.json 文件
+
+例如使用 CMake 可以这样生成（先生成 json 文件，再软链接到项目根目录）：
+
+```shell
+cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -S . -B build
+ln -s build/compile_commands.json .
+```
 
 ## 需要安装的字体
 
