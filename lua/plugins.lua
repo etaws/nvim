@@ -9,6 +9,7 @@ return require("packer").startup(function(use)
     use("Mofiqul/vscode.nvim")
     use("tjdevries/colorbuddy.vim")
     use("Th3Whit3Wolf/onebuddy")
+    use("mhartington/oceanic-next")
 
     use("kyazdani42/nvim-web-devicons")
 

@@ -27,9 +27,12 @@ cargo install stylua
 ## 需要安装的 LSP Server
 
 * [rust-analyzer](https://rust-analyzer.github.io)
+  * 需要格式化代码的话，还需要配置 rustfmt
 * [lua-language-server](https://github.com/sumneko/lua-language-server)
+  * 需要格式化代码的话，还需要安装 stylua
 * cmake-language-server
-* clangd（如果要格式化的话，还需要确保安装了 clang-format
+* clangd
+  * 如果要格式化的话，还需要确保安装了 clang-format
 
 > clangd 正常工作，还需要在项目根目录生成一个 compile_commands.json 文件
 

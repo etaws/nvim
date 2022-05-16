@@ -1,12 +1,12 @@
-local colorscheme = "zephyr"
--- onebuddy 
+local colorscheme = "OceanicNext"
+-- onebuddy
 -- tokyonight
 -- OceanicNext
 -- gruvbox
 -- zephyr
 -- nord
 -- onedark
--- nightfox 
+-- nightfox
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
@@ -16,4 +16,3 @@ end
 
 vim.g.vscode_style = "light"
 vim.g.vscode_disable_nvimtree_bg = true
-

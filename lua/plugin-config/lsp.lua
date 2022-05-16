@@ -46,9 +46,12 @@ nvim_lsp["sumneko_lua"].setup({
     settings = {
         Lua = {
             runtime = { version = "LuaJIT", path = runtime_path },
-            diagnostics = { globals = { "vim", "use", "packer_plugins" } },
+            diagnostics = { globals = { "vim" } },
             telemetry = { enable = false },
-            workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+            workspace = {
+                library = vim.api.nvim_get_runtime_file("", true),
+                checkThirdParty = false,
+            },
         },
     },
     on_attach = on_attach,

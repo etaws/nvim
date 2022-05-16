@@ -1,4 +1,4 @@
-local ok, stylua = pcall(require, "stylua")
+local ok, _ = pcall(require, "stylua")
 if not ok then
     vim.notify("Could not load stylua")
     return
