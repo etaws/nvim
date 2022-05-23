@@ -1,10 +1,12 @@
-local markdownlint = require('lint.linters.markdownlint')
+local markdownlint = require("lint.linters.markdownlint")
 markdownlint.args = {
-  '--config=/Users/xzhou/.config/markdownlint/.markdownlint.json'
+    "--config=/Users/xzhou/.config/markdownlint/.markdownlint.json",
 }
 
-require('lint').linters_by_ft = {
-    markdown = {'markdownlint',}
+require("lint").linters_by_ft = {
+    markdown = { "markdownlint" },
+    cpp = { "cppcheck", "clangtidy" },
+    cmake = { "cmakelint" },
 }
 
 vim.cmd([[
