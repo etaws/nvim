@@ -56,6 +56,10 @@ return require("packer").startup(function(use)
 
     use({ "mfussenegger/nvim-lint" })
 
+    use({ "mfussenegger/nvim-dap" })
+    use({ "rcarriga/nvim-dap-ui" })
+    use({ "Shatur/neovim-cmake" })
+
     use({ "sbdchd/neoformat" })
     use({ "folke/which-key.nvim" })
 

@@ -11,6 +11,8 @@ Neovim 配置文件（for Mac OS）
 * ripgrep
 * gnu-sed
 * exiftool
+* cmake
+* llvm
 
 安装命令：
 
@@ -32,7 +34,7 @@ cargo install stylua
   * 需要格式化代码的话，还需要安装 stylua
 * cmake-language-server
 * clangd
-  * 如果要格式化的话，还需要确保安装了 clang-format
+  * 如果要格式化的话，还需要确保能运行 clang-format
 
 > clangd 正常工作，还需要在项目根目录生成一个 compile_commands.json 文件
 
@@ -42,6 +44,8 @@ cargo install stylua
 cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -S . -B build
 ln -s build/compile_commands.json .
 ```
+
+* 调试代码需要安装 codelldb。安装方案：[参考](https://github.com/mfussenegger/nvim-dap/wiki/C-C---Rust-(via--codelldb))
 
 ## 需要安装的字体
 
