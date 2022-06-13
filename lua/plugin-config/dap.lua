@@ -4,8 +4,8 @@ if not ok then
     return
 end
 
-local ok, dapui = pcall(require, "dapui")
-if not ok then
+local ok_dapui, dapui = pcall(require, "dapui")
+if not ok_dapui then
     vim.notify("Could not load dapui")
     return
 end
@@ -76,6 +76,12 @@ dap.configurations.c = {
         runInTerminal = false,
     },
 }
+
+vim.keymap.set("n", "<F5>", require("dap").continue, { desc = "Debug: Continue" })
+vim.keymap.set("n", "<F10>", require("dap").step_over, { desc = "Debug: Step over" })
+vim.keymap.set("n", "<F11>", require("dap").step_into, { desc = "Debug: Step into" })
+vim.keymap.set("n", "<F12>", require("dap").step_out, { desc = "Debug: Step out" })
+vim.keymap.set("n", "<F9>", require("dap").toggle_breakpoint, { desc = "Debug: Toggle breakpoint" })
 
 require("dapui").setup()
 

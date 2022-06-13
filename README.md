@@ -13,6 +13,7 @@ Neovim 配置文件（for Mac OS）
 * exiftool
 * cmake
 * llvm
+* codelldb
 
 安装命令：
 
@@ -46,6 +47,7 @@ ln -s build/compile_commands.json .
 ```
 
 * 调试代码需要安装 codelldb。安装方案：[参考](https://github.com/mfussenegger/nvim-dap/wiki/C-C---Rust-(via--codelldb))
+  * dap 插件的配置里面要设置 codelldb 的绝对路径：...codelldb/extension/adapter/codelldb
 
 ## 需要安装的字体
 

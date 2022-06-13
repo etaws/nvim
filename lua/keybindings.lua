@@ -17,5 +17,6 @@ map("n", "<C-h>", "<cmd>SymbolsOutline<CR>", opt)
 
 map("n", "<C-l>", ":ls<CR>:b<Space>", opt)
 map("n", "<C-k>", ":bd<CR>", opt)
+map("n", "<F8>", ":ccl<CR>", opt)
 
 return pluginKeys
